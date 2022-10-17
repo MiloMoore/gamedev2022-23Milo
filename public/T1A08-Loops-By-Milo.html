@@ -4,6 +4,10 @@ Version 0.0.1
 
 <h4> Example input output code</h4>
 <pre>
+for (let w = 0; w < 10; w++)
+{
+text += cars[w] + "<br>";
+}
 
 
 </pre>
@@ -12,14 +16,19 @@ Version 0.0.1
 
 Max loops: <input id="myNum01" ttype=number value="4" ><br>
 
-<input type=button value="Basic For loop with Decisions" onclick="{document.getElementById('myDiv01').innerHTML = '' let myTemp = ''
+<input type=button value="Basic For loop with Decisions" onclick="{
+                                                                  document.getElementById('myDiv01').innerHTML = '' let myTemp = ''
                                                                   
                                                                   let myMax = parseInt(document.getElementById('myNum01').value)
                                                                   
                                                                   for (let myLoop = 0; myLoop < myMax; myLoop++ ) 
-                                                                  { myTemp += ' cool '
+                                                                  { 
+                                                                  myTemp += ' cool '
                                                                   }
-                                                                  myTemp += 'Loop number: ' + myLoop + '<br>'}document.getElementById('myDiv').immerHTML = myTemp}">
+                                                                  myTemp += 'Loop number: ' + myLoop + '<br>'
+                                                                  }
+                                                                  document.getElementById('myDiv').immerHTML = myTemp}">
+      
 
 <div id="myDiv01">...</div>
                                                                   
