@@ -21,4 +21,36 @@ document.getElementById('myDiv').innerHTML = myIn01 + ' squared = ' + myIn01*myI
                                                     let myAnswer = myIn01 * myIn01
                                                     document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myAnswer}"><br>
 
-<div id="myDiv01">....</div>
+<head>
+  <style type="text/css">
+    body {
+      margin: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    1st Number : <input type="text">
+    id="firstNumber" /><br>
+    2nd Number : <input type="text">
+    id="secondNumber" /><br>
+    <input type="button" onclick="multiplyBy() " value="Multiply" /><br>
+  </form>
+  
+ <p> the result is : <br>
+   <span id = "result"></span>
+  </p>
+  
+  <script>
+    function multiplyBy()
+    {
+      num1 = document.getElementById('firstNumber').value;
+      num2 = document.getElementById('secondNumber').value;
+      document.getElementById('result').innerHTML = numl * num2;
+    }
+  </script>
+</body>
+
+<div id="myDiv01">...</div>
+
