@@ -26,22 +26,19 @@ document.getElementById('myDiv').innerHTML = myIn01 + ' squared = ' + myIn01*myI
 
 <h4>Multiply</h4><br>
 
-<script>
-function doMath() {
-  var numOne = document.getElementById('num1').value;
-  var numTwo = document.getElementById('num2').value;
-  var theProduct = parseInt(numOne) * parseInt(numTwo);
-  document.write(theProduct);
-}
-</script>
 
+<head>
+<title>Output Tag</title>
+</head>
 <body>
-  <form>
-    First Number<br>
-    <input id="num1" type="text" name="num1">
-    <br> Second Number:<br>
-    <input id="num2" type="text" name="num2">
-    <br><br>
-    <input type="button" value="Do Maths" onclick="doMath()" />
-  </form>
+ <p>Calculate the Sum of the two Numbers</p>
+ <form oninput="res.value=parseInt(a.value)+parseInt(b.value);">
+ 	<label>Enter First Value.</label><br>
+ 	<input type="number" name="a" value=""/><br>
+ 	+<br/>
+ 	<label>Enter First Value.</label><br> 
+ 	<input type="number" name="b" value=""><br>
+ 	=<br>
+ 	Output is:<output name="res"></output>
+ </form>
 </body>
