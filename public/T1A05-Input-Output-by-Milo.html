@@ -26,36 +26,34 @@ document.getElementById('myDiv').innerHTML = myIn01 + ' squared = ' + myIn01*myI
 
 <h4>Multiply</h4><br>
 
-<head>
-  <style type="text/css">
-    body {
-      margin: 30px;
-    }
-  </style>
-</head>
+<!DOCTYPE html>
+<html>
+  <body>
 
-<body>
-  <form>
-    1st Number : <input type="text">
-    <id="firstNumber" /><br>
-    2nd Number : <input type="text">
-    <id="secondNumber" /><br>
-    <input type="button" onClick="multiplyBy() " value="Multiply" /><br>
-  </form>
-  
- <p> the result is : <br>
-   <span id = "result"></span>
-  </p>
-  
+    <form>
+        First Number<br>
+        <input id="num1" type="text" name="num1">
+    <br>
+        Second Number:<br>
+        <input id="num2" type="text" name="num2">
+        <br><br>
+      <input type="button" value="Do Maths" onclick="doMath();" />
+    </form>
+
   <script>
-    function multiplyBy()
-    {
-      num1 = document.getElementById("firstNumber").value;
-      num2 = document.getElementById("secondNumber").value;
-      document.getElementById("result").innerHTML = numl * num2;
-    }
+
+      function doMath() {
+          var numOne = document.getElementById('num1').value;
+          var numTwo = document.getElementById('num2').value;
+          var theProduct = parseInt(my_input1) * parseInt(my_input2);  document.write(theProduct);
+          document.write(theProduct);
+
+
+}
+
   </script>
-</body>
 
 
+  </body>
+</html>
 
