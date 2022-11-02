@@ -34,5 +34,23 @@ Note: ! = Not, && = AND, || = OR
                                                document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
                                                }">
 
+
+
 <div id="myDiv01">...</div>
+
+<h1>Type 1 to 20</h1>
                                                
+<input id="mySum01" type=number value ""><br>
+
+<input type=button value="submit" onclick="{
+                                           let mySum01 = parseFloat(document.getElementById('mySum01').value)
+                                           if (mySum01 >= 20){
+                                           document.getElementById('mySum01').innerHTML = mySum01 + 'good job'
+                                           } 
+                                           else {
+                                           document.getElementById('mySum01').innerHTML = mySum01 + 'wrong bozo'
+                                           }
+                                           }">
+
+
+
