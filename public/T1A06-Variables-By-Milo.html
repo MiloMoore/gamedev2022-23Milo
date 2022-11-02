@@ -28,23 +28,38 @@ let myIn01 = document.getElementById('myText').value
                                                       document.getElementById('myDiv01').innerHTML = 
                                                       document.getElementById('myText01').value
                                                       }"><br>
-<script>
-   var a = 10;
-  var b = 20;
-  var sum = a + b;
-  
-  var a, b, sum;
-  a = 10;
-  b = 20;
-  sum = a + b;
-  console.log(sum);
-</script>
-<script>
-  var a ="yellow is my favorite color";
-  console.log(a)
-</script>
+
 <div id="myDiv01">...</div>
-  
+
+   <body>
+        Please solve for "x":
+        <br>
+        <var id="x">x</var> +
+        <var id="y">y</var> =
+        7
+
+        <br>
+
+        <input id="answer">
+        <script>
+            x.innerText = 'x'
+            y.innerText = 4
+            answer.addEventListener(
+                'keyup',
+                () => {
+                    x.innerText = answer.value
+                    if(!!!x.innerText) x.innerText = 'x'
+                
+
+                }
+            )
+                                                 
+        </script>
+
+
+
+
+    </body>  
              
             
 
