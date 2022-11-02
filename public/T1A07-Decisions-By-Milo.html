@@ -40,27 +40,18 @@ Note: ! = Not, && = AND, || = OR
 
 <h2>Type 1 to 20</h2>
                                                
-<input id="mySum01" type=number value ""><br>
+<input id="mySum01" type=number value "20"><br>
 
 <input type=button value="submit" onclick="{
                                            let mySum01 = parseFloat(document.getElementById('mySum01').value)
-                                           if (mySum01 >= 20){
+                                           if (mySum01 = 20 || mySum = ){
                                            document.getElementById('mySum01').innerHTML = mySum01 + 'good job'
                                            } 
                                            else {
                                            document.getElementById('mySum01').innerHTML = mySum01 + 'wrong bozo'
                                            }
                                            }"><br>
+<div id="myDiv01">...</div>
 
-<h2>JavaScript if</h2>
 
-<p>Display "Good day!" if the hour is less than 18:00:</p>
-
-<p id="demo">Good Evening!</p>
-
-<script>
-if (new Date().getHours() < 18) {
-  document.getElementById("demo").innerHTML = "Good day!";
-}
-</script>
 
