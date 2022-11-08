@@ -32,17 +32,13 @@ Max loops; <input id="myNum01" type=number value="4"><br>
 <div id="myDiv01">...</div>
 
 <body>
- <input type=button value="button" onClick="demo">
+ <input type=button value="button" onClick="{
+                                            let text = "";
+                                            for (let i = 0; i < 5; i++) {
+                                            text += ' The number is ' + i + ';<br>
+                                            document.getElementById("demo").innerHTML = text;
+                                            }">
 
-<script>
-let text = "";
-
-for (let i = 0; i < 5; i++) {
-  text += "The number is " + i + "<br>";
-}
-
-document.getElementById("demo").innerHTML = text;
-</script>
 
 </body>
 
