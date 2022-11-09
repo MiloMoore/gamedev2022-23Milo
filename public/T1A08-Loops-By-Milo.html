@@ -1,3 +1,4 @@
+ <!DOCTYPE html>
 Version 0.0.1
 
 <h2 align=center>T1A08-Loops-By-Milo.html</h2>
@@ -8,14 +9,63 @@ Version 0.0.1
 <pre>
 for (int i = 9; i >= 9; i++) {
 
+<script>function togglePopup(){
+document.getElementById("popup-1").classList.toggle("active");}</script>
+<style>
 
+
+.popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;}
+.popup .content {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%) scale(0);
+  
+  width:450px;
+  height:220px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+}
+.popup .close-btn {
+position:absolute;
+right:20px;
+top:20px;
+width:30px;
+height:30px;
+background:#222;
+color:#fff ;
+font-size:25px;
+font-weight:600;
+line-height:30px;
+text-align:center;
+border-radius:50%;
+}
+.popup.active .overlay {
+  display:block;
+}
+.popup.active .content {
+transition:all 300ms ease-in-out;
+transform:translate(-50%, -50%) scale(1);
+}
+
+</style>
 </pre
 
 <h4> Example of working code</h4>
 
 Max loops; <input id="myNum01" type=number value="4"><br>
 
-<input type=button value="Basic for loop with Decisions" onclick"{
+<input type=button value="Basic for loop with Decisions" onclick "{
                                                                  document.getElementById('myDiv01').innerHTML = ''
                                                                  let myTemp = ''
                                                                  let myMax = parseInt(document.getElementById('myNum01').value)
@@ -37,6 +87,46 @@ Max loops; <input id="myNum01" type=number value="4"><br>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <div class="popup" id="popup-1">
+   <div class="overlay"><div id="wrapper">
+    <div class="box">
+      <div class="loop_js" id="loop_js" style="transform: translate(0%, 0%);">
+        <ul>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=4" alt=""height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=4" alt="" height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt=""height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
+        </ul>
+      </div>
+      <div class="loop_js2" id="loop_js2" style="transform: translate(0%,10%);">
+        <ul>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt=""height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt=""height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
+          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
+         
+        </ul>
+      </div>
+
+    </div>
+  </div> </div>
+   <div class="content">
+     <div class="close-btn" onclick="togglePopup()">&times;
+      <div style="position:relative; height:60px;">
+
+</div>
+       </div>
+   </div>
+   
+   <button onclick="togglePopup()">Show Popup</button>
   <style>
 body,
 html {
@@ -69,36 +159,7 @@ ul {
   </style>
 </head>
 <body>
-  <div id="wrapper">
-    <div class="box">
-      <div class="loop_js" id="loop_js" style="transform: translate(0%, 0%);">
-        <ul>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=4" alt=""height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=4" alt="" height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt=""height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
-        </ul>
-      </div>
-      <div class="loop_js2" id="loop_js2" style="transform: translate(0%,10%);">
-        <ul>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt=""height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt=""height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
-          <li><a href="#"><img src="https://avatars.githubusercontent.com/u/5605614?v=" alt="" height="200px" width="200px"></a></li>
-         
-        </ul>
-      </div>
-
-    </div>
-  </div> 
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
