@@ -1,77 +1,99 @@
-Version 0.0.2
+<html><head></head><body style="background-color:#FF79A9;">Version 0.0.1
 
-<h2 align=center>T1A07-Decisions-By-Milo.html</h2>
+<h2 align="center">t1a07-decision-by-Fred.html</h2>
 
-<a href="https://www.w3schools.com/js/js_if_else.asp"> Good reference to Decisions if...else statements
-  Javascript innerHTML value By Milo</a><br>
-
-Note: ! = Not, && = AND, || = OR
+<a href="https://www.w3schools.com/js/js_if_else.asp">Good reference to Decisions if ... else statments 
+Javascript innerHTML value by Fred</a><br>
+Note: ! = Not,  &amp;&amp; = AND,   || = OR
 
 <h4> Example input output code</h4>
+<pre>let myHour = 20
+if (myHour &lt; 18) {
+  let myGreeting = 'Good day';
+}
+</pre>
 
-<input id="myNum01" type=number value "4"><br>
+<h4> Example working code</h4>
 
-<input type=button value="Simple if Statement for Decision Making" onclick="{
-                                                                            let myIn01 = parseFloat(document.getElementById('myNum01').value)
-                                                                            if (myIn01 >= 3){
-                                                                            document.getElementById('myDiv').innerHTML = muIn01 + ' is greater than 3 '
-                                                                            }
-                                                                            }">
+<input id="myNum01" type="number" value="4"><br> 
 
-<input type=button value="if...else" onclick="{
-                                              letmyIn01 = parseFloat(document.getElementById('myNum01').value)
-                                              if (myIn01 >= 3){
-                                              document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3 '
-                                              } else {
-                                              document.getElementById('myDiv01').innerHTML = myIn01 + ' is less than 3'}
-                                              }">
+<input type="button" value="Simple if Statement for Decision Making" onclick="{
+    let myIn01 = parseFloat(document.getElementById('myNum01').value)
+    if (myIn01 >= 3){
+        document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
+    }
+}">
 
-<input type=button value="complex if" onclick="{
-                                               let myIn01 = parseFloat(document.getElementById('myNum01').value)
-                                               if ((myIn01 != 3 || myIn01 > -3) && myIn01 <=100 ){
-                                               document.getElementById('myDiv').innerHTML = myIn01 + ' is complex '
-                                               } else {
-                                               document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
-                                               }">
+<input type="button" value="if...else" onclick="{
+    let myIn01 = parseFloat(document.getElementById('myNum01').value)
+    if (myIn01 >= 3){
+        document.getElementById('myDiv01').innerHTML = myIn01 + ' is greater than 3'
+    } else {
+        document.getElementById('myDiv01').innerHTML = myIn01 + ' is less than 3'}
+}">
 
-
-
+<input type="button" value="Complex if" onclick="{
+    let myIn01 = parseFloat(document.getElementById('myNum01').value)
+    if ((myIn01 != 3 || myIn01 > -3)  &amp;&amp; myIn01 <=100 ){
+        document.getElementById('myDiv01').innerHTML = myIn01 + ' is complex'
+    } else {
+        document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'}
+}">
 <div id="myDiv01">...</div>
 
+<h4> How big are you? write 1.78 for 1.78m as example</h4>
 
-<body>
+
+
+<input id="myHeight01" type="number" value="5"><br> 
+
+
+<input type="button" value="What grade will i get for this assignment? :)" onclick="{
+    let myIn01 = parseFloat(document.getElementById('myHeight01').value)
+    if (myIn01 <= 7){
+        document.getElementById('myDiv02').innerHTML = myIn01 + ' put your glasses on, im not that terrible'
+    } else {
+        document.getElementById('myDiv02').innerHTML = myIn01 + ' i could just kiss you right now thank you mr.ellis <3'}
+}"
   
- <p>A time-based greeting:</p>
+>
+ 
 
-<p id="demo"></p>
+<div id="myDiv02">...</div>
 
+  
+  <label for="weather">Please dont tell my mother i made this</label>
+<select id="weather">
+  <option value="">--my poopy family--</option>
+  <option value="brother">Brother</option>
+  <option value="mother">Mother</option>
+  <option value="sister">sister</option>
+  <option value="Step daddy">Step daddy</option>
+</select>
+
+<p></p>
 <script>
-const time = new Date().getHours();
-let greeting;
-if (time < 10) {
-  greeting = "Good morning";
-} else if (time < 20) {
-  greeting = "Good day";
-} else {
-  greeting = "Good evening";
-}
-document.getElementById("demo").innerHTML = greeting;
-</script>
+const select = document.querySelector('select');
+const para = document.querySelector('p');
 
+select.addEventListener('change', setWeather);
+
+function setWeather() {
+  const choice = select.value;
+
+  if (choice === 'brother') {
+    para.textContent = 'My Brother is annoying';
+  } else if (choice === 'mother') {
+    para.textContent = 'she looks like shrek';
+  } else if (choice === 'sister') {
+    para.textContent = 'white man';
+  } else if (choice === 'Step daddy') {
+    para.textContent = 'networth: 74.81 Canadian Dollar';
+  } else {
+    para.textContent = '';
+  }
+}</script>
   
   
-
+  </body></html>
   
-</body>
-
-
-
-  
-
-  
-  
-
-
-
-
-
