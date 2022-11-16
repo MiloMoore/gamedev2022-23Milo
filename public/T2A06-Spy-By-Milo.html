@@ -1,4 +1,5 @@
-<html>
+
+   <body style="background-color:#a1f9ff;"></body>
 <h1 align=center>t2a06-spy-name.html</h1>
 <textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
 
@@ -13,6 +14,12 @@
       myString[myLoop] = myTemp
    }
    document.getElementById('myArea02').value = myString.join('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      if (myString[myLoop] == 'f') {myTemp  = 'e'} 
+      if (myString[myLoop] == 'h') {myTemp  = 'i'} 
+      myString[myLoop] = myTemp
+}
 }"><br><br>
 
 
@@ -20,9 +27,15 @@
 <textarea id="myArea02" rows=4 cols=70></textarea><br> 
 
 <input type=button value="decrypt" onclick="{
-   alert('Sorry, you have to do this!')
+    document.getElementById('myArea02').value = myString.join('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      if (myString[myLoop] == 'f') {myTemp  = 'e'} 
+      if (myString[myLoop] == 'h') {myTemp  = 'i'} 
+      myString[myLoop] = myTemp
+}
+   
 }"><br><br>
 
 
 <textarea id="myArea03" rows=4 cols=70></textarea><br> 
-</html>
