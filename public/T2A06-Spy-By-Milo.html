@@ -1,26 +1,59 @@
-
-   <body style="linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)"></body>
-<h1 align=center>t2a06-spy-name.html</h1>
-<textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
-
-
-<input type=button value="encrypt" onclick="{
-   let myTemp = ''
-   myString = document.getElementById('myArea01').value.toLowerCase().split('')
-   for (let myLoop=0;   myLoop < myString.length; myLoop++){
-      myTemp = myString[myLoop]
-      if (myString[myLoop] == 'e') {myTemp  = 'f'} 
-      if (myString[myLoop] == 'h') {myTemp  = 'i'} 
-      myString[myLoop] = myTemp
-   }
-   document.getElementById('myArea02').value = myString.join('')
-   for (let myLoop=0;   myLoop < myString.length; myLoop++){
-      myTemp = myString[myLoop]
-      if (myString[myLoop] == 'f') {myTemp  = 'e'} 
-      if (myString[myLoop] == 'h') {myTemp  = 'i'} 
-      myString[myLoop] = myTemp
-}
-}"><br><br>
+<html><head><style>
+    .button {
+      display: inline-block;
+      padding: 5px 10px;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #C0C0C0;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+    
+    .button:hover {background-color: #808080}
+    
+    .button:active {
+      background-color: #808080;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+    
+  
+    }</style></head><body><h1 align="center">t2a06-spy-name.html</h1>
+    <textarea id="myArea01" rows="4" cols="70">Hello how are you</textarea><br> 
+    
+    
+    <input class="button" type="button" value="encrypt" onclick="{
+       let myTemp = ''
+       myString = document.getElementById('myArea01').value.toLowerCase().split('')
+       for (let myLoop=0;   myLoop < myString.length; myLoop++){
+          myTemp = myString[myLoop]
+          if (myString[myLoop] == 'e') {myTemp  = 'f'} 
+          if (myString[myLoop] == 'h') {myTemp  = 'i'} 
+          myString[myLoop] = myTemp
+       }
+       document.getElementById('myArea02').value = myString.join('')
+    }"><br><br>
+    
+    
+    
+    <textarea id="myArea02" rows="4" cols="70"></textarea><br> 
+    
+    <input class="button" type="button" value="decrypt" onclick="{
+       let myTemp = ''
+       myString = document.getElementById('myArea01').value.toLowerCase().split('')
+       for (let myLoop=0;   myLoop < myString.length; myLoop++){
+          myTemp = myString[myLoop]
+          if (myString[myLoop] == 'f') {myTemp  = 'e'} 
+          if (myString[myLoop] == 'i') {myTemp  = 'h'} 
+          myString[myLoop] = myTemp
+       }
+       document.getElementById('myArea02').value = myString.join('')
+    }"><br><br>
     <br>
     <br>
     <br>
@@ -100,6 +133,11 @@
        }
        document.getElementById('myArea05').value = myString.join('')
     }"><br><br>
+    
+    <textarea id="myArea03" rows="4" cols="70" value="Hello world ">Write anything you want </textarea><br> 
+    <textarea id="myArea04" rows="4" cols="70"></textarea><br> 
+    <textarea id="myArea05" rows="4" cols="70"></textarea><br> 
+    </body></html> 
 
 
 
