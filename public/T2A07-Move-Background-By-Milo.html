@@ -7,7 +7,7 @@
 
 <input id="myButton01" type=button value="background move left" onclick="{
   myTemp = '100px 0px'
-  myGlobalX -= 5
+  myGlobalX -= 50
   myTemp =  myGlobalX + 'px 0px'
   document.getElementById('myBody').style.backgroundPosition =myTemp
 }">
@@ -16,12 +16,28 @@
   clearInterval(myClock)
   myClock = setInterval(function(){
      document.getElementById('myButton01').click() 
-  }, 100)
+  }, 10)
     
 }">
 
 <input type=button value="Image Right" onclick="{
-  document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
-}"><br><br>
+  document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 50 + 'px'
+}">
+
+<input type=button value="Image Left" onclick="{
+  document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 50 + 'px'
+}">
+<input type=button value="Image up" onclick="{
+  document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 50 + 'px'
+}">
+<input type=button value="Image down" onclick="{
+  document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 50 + 'px'
+}">
+<input type=button value="Make the Image disappear forever" onclick="{
+  document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) -50 + '10px'
+}">
+<br>
+<br>
+<br>
 
 <img id="myImage01" style="position:relative; width:100px; height:80px; top:0px; left:0px;" src="https://i2.wp.com/hipfoodiemom.com/wp-content/uploads/2020/04/IMG_9525-2.jpg">
