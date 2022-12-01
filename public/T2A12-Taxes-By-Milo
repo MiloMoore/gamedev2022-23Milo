@@ -1,1 +1,77 @@
-hi
+<html><head><style>body {
+    margin: 50px;
+    
+  background-color: green;
+background-image: linear-gradient(0deg, white 0%, grey 100%);
+
+font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+opacity: 1;
+    color: black;
+    text-align: center;
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }</style></head><body>
+
+<div class="container-fluid">
+    <header>
+        <h1>Work per hour thing</h1>
+    </header>
+<table border=1>
+  <tr><td>
+  Salary</td><td> <input type="text" name="number1" id="number1" value="15"></td></tr>
+  <tr><td>Work</td><td> <input type="text" name="number2" id="number2" value="8"></td></tr>
+  <tr><td>Tax</td><td> <input type="text" name="number3" id="number3" value="30"><br>
+    </td></tr>
+</table><br>
+    
+   
+    <button type="button" class="btn btn-info" onclick="submit1()">submit</button><br><br>
+     <table border=1>
+          <tr><td>Daily taxed</td><td> <div class="screen" id="screen1"></div></td></tr>
+          <tr><td>Monthly taxed</td><td> <div class="screen" id="screen2"></div></td></tr>
+          <tr><td>Yearly taxed</td><td> <div class="screen" id="screen3"></div></td></tr>
+    </table>
+<br>
+<br>
+<br>
+<table border=1>
+          <tr><td>Daily untaxed</td><td> <div class="screen" id="screen4"></div></td></tr>
+          <tr><td>Monthly untaxed</td><td> <div class="screen" id="screen5"></div></td></tr>
+          <tr><td>Yearly untaxed</td><td> <div class="screen" id="screen6"></div></td></tr>
+    </table>
+
+
+
+
+
+</div> 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$( document ).ready(function() {
+
+});
+function submit1(){
+    var a =  document.getElementById("number1").value;
+    var b =  document.getElementById("number2").value;
+    var c =  document.getElementById("number3").value;
+    
+    var d = (parseInt(a) * parseInt(b)) / (parseInt(c) / 21);
+    document.getElementById("screen1").innerHTML= 'Your daily taxed salary is: ' + d + 'CAD';
+    var e = (parseInt(d) * 20);
+    document.getElementById("screen2").innerHTML= 'Your monthly taxed salary (20 days) is: ' + e + 'CAD';
+    var f = (parseInt(d) * 240);
+     document.getElementById("screen3").innerHTML= 'Your yearly taxed salary (240 days) is: ' + f + 'CAD';
+     var g = (parseInt(a) * parseInt(b));
+    document.getElementById("screen4").innerHTML= 'Your daily untaxed salary is: ' + g + 'CAD';
+    var i = (parseInt(a) * parseInt(b) * 240);
+    document.getElementById("screen6").innerHTML= 'Your yearly untaxed salary (240 days) is: ' + i + 'CAD';
+    var h = (parseInt(a) * parseInt(b) * 20);
+    document.getElementById("screen5").innerHTML= 'Your monthly untaxed salary (30 days) is: ' + h + 'CAD';
+  }
+</script>
+</body></html>
